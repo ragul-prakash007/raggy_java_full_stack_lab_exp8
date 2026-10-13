@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "https://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+
+        <!-- PostgreSQL Driver -->
+        <property name="hibernate.connection.driver_class">
+            org.postgresql.Driver
+        </property>
+
+        <!-- Database URL -->
+        <property name="hibernate.connection.url">
+            jdbc:postgresql://localhost:5432/inventorydb
+        </property>
+
+        <!-- PostgreSQL Username -->
+        <property name="hibernate.connection.username">
+            postgres
+        </property>
+
+        <!-- PostgreSQL Password -->
+        <property name="hibernate.connection.password">
+            ragul@007
+        </property>
+
+        <!-- Hibernate Dialect -->
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.PostgreSQLDialect
+        </property>
+
+        <!-- Automatically update database structure -->
+        <property name="hibernate.hbm2ddl.auto">
+            update
+        </property>
+
+        <!-- Show SQL queries -->
+        <property name="hibernate.show_sql">
+            true
+        </property>
+
+        <!-- Format SQL queries -->
+        <property name="hibernate.format_sql">
+            true
+        </property>
+
+        <!-- Entity class -->
+        <mapping class="com.productinventory.entity.Product"/>
+
+    </session-factory>
+
+</hibernate-configuration>
